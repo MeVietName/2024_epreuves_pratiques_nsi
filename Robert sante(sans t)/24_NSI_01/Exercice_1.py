@@ -8,29 +8,47 @@ a = {'F':['B','G'],
      'I':['','H'], 
      'H':['','']}
 
+# cor
+def taille(arbre, lettre):
+     if lettre == '':
+          return 0
+     return 1 + taille(arbre, arbre[lettre][0]) + taille(arbre, arbre[lettre][1])
 
-def taille(arbre: dict, lettre: str):
-     countgauche = 0
-     countdroite = 0
+print(taille(a, "F"))
+
+'''
+------- J'ai essaye ca -----
+count = 0
+
+def taille(arbre: dict, lettre: str, compteur: int):
      if arbre[lettre][0] != "":
-          taille(arbre, arbre[lettre][0])
-          countgauche += 1
-          print(countgauche)
+          taille(arbre, arbre[lettre][0], compteur)
+          return count + 1
           print("if1")
+          print(count)
+          # return countgauche
           
      if arbre[lettre][1] != "":
-          taille(arbre, arbre[lettre][1])
-          countdroite += 1
-          print(countdroite)
+          taille(arbre, arbre[lettre][1], compteur)
+          return count + 1
           print("if2")
+          print(count)
+          # return countdroite
 
-     total = countgauche + countdroite
-     print(f"le total est {total}")
-     return total
+     print("TOTAL COUNT : ")
+     total = count + 1
+     print(count)
+     
+     return taille(arbre, lettre, compteur)
 
-taillecount = 0
-taillecount += taille(a, "F")
+
+BIGTOTALCOUNT = taille(a, "F", count)
 print(f"taille count {taillecount}")
+
+
+# taillecount = 0
+# taillecount += taille(a, "F")
+# print(f"taille count {taillecount}")
           
 # need de trouver comment faire le compteur et de faire le return
 
@@ -42,3 +60,4 @@ print(f"taille count {taillecount}")
 # print(test[0])
 # or
 # print(a["F"][0])
+'''
