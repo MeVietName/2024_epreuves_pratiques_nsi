@@ -10,10 +10,10 @@ def tri_selection(tab):
     N = len(tab)
     for k in range(0, N): 
         imin = k
-        for i in range(imin, N): 
+        for i in range(k+1, N): 
             if tab[i] < tab[imin]: 
                 imin = i
-        echange(tab, i, k) 
+        echange(tab, k, imin) 
 
 tab = [41, 55, 21, 18, 12, 6, 25]
 tri_selection(tab)
