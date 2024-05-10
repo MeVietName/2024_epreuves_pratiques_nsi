@@ -24,13 +24,17 @@ def bon_parenthesage(ch):
     est bien parenthésée"""
     p = Pile()
     for c in ch:
-        if c == ...: 
+        if c == "(": 
             p.empiler(c)
-        elif c == ...: 
+        elif c == ")": 
             if p.est_vide():
-                ...
+                return False
             else:
-                ...
-    return ... 
+                p.depiler()
+    return p.est_vide()
 
+# True
+print(bon_parenthesage("((()())(()))"))
 
+# False
+# print(bon_parenthesage("())(()"))
