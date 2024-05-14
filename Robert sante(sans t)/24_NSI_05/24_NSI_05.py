@@ -32,5 +32,3 @@ def nombre_points_rupture(ordre):
     if ordre[i] != ...: # le dernier n'est pas n 
         nb = nb + 1
     return nb
-
-
