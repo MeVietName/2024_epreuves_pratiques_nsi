@@ -2,7 +2,6 @@ def nombre_de_mots(phrase: str) -> int:
     count = 1
     length = len(phrase)
     for i in range(0, length):
-        # print(phrase[i])
         if phrase[i] in ['.','!','?']:
             # Merci kant1 
             # If phrase[i] == trux1 OR phrase[i] == truc2
@@ -10,7 +9,6 @@ def nombre_de_mots(phrase: str) -> int:
             return count
         elif phrase[i] == ' ' and phrase[i+1] not in ['!','?']:
             count += 1
-            # print(count)
     return count
         
 
@@ -25,4 +23,4 @@ print(nombre_de_mots('Le point d exclamation est séparé !'))
 print(nombre_de_mots('Combien de mots y a t il dans cette phrase ?'))
 
 # 1
-# print(nombre_de_mots('Fin.'))
+print(nombre_de_mots('Fin.'))
