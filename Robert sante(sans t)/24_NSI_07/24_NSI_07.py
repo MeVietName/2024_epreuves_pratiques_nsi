@@ -15,3 +15,5 @@ def tri_insertion(tab):
         tab[j] = ... 
 
 
+
+print(tri_insertion([98, 12, 104, 23, 131, 9]))
