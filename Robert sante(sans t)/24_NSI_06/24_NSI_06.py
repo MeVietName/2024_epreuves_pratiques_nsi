@@ -3,7 +3,7 @@ def depouille(urne):
     dictionnaire avec le nombre de voix pour chaque candidat'''
     resultat = ... 
     for bulletin in urne:
-        if ...: 
+        if ...:
             resultat[bulletin] = resultat[bulletin] + 1
         else:
             ...
