@@ -3,11 +3,14 @@ def binaire(a):
     binaire sous forme de chaine de caractères.'''
     if a == 0:
         return '0'
-    bin_a = ... 
-    while ...: 
-        bin_a = ... + bin_a 
-        a = ... 
+    bin_a = "" 
+    while a>0: 
+        bin_a = str(a%2) + bin_a 
+        a = a//2 
     return bin_a
 
+# '0'
+print(binaire(0))
 
-
+# '1001101'
+print(binaire(77))
