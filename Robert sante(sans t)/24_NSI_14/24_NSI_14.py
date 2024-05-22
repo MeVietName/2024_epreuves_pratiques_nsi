@@ -1,16 +1,16 @@
 class Carte:
     def __init__(self, c, v):
-        """Initialise les attributs couleur (entre 1 et 4), 
-        et valeur (entre 1 et 13). """
+        """Initialise les attributs :
+        couleur (entre 1 et 4), 
+        valeur (entre 1 et 13). """
         self.couleur = c
         self.valeur = v
 
     def recuperer_valeur(self):
         """ Renvoie la valeur de la carte : 
         As, 2, ..., 10, Valet, Dame, Roi """
-        valeurs = ['As','2', '3', '4', '5', '6', '7', '8', 
-                   '9', '10', 'Valet', 'Dame', 'Roi']
-        return valeurs[self.valeur - 1]
+        valeurs = ['As','2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi']
+        return valeurs[self.valeur - 1] 
 
     def recuperer_couleur(self):
         """ Renvoie la couleur de la carte 
