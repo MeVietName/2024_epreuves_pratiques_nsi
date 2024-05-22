@@ -5,7 +5,7 @@ def empaqueter(liste_masses, c):
     n = len(liste_masses)
     nb_boites = 0
     boites = [ 0 for _ in range(n) ]
-    for masse in ...: 
+    for masse in n: 
         i = 0
         while i < nb_boites and boites[i] + ... > c: 
             i = i + 1

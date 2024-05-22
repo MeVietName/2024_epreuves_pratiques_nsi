@@ -19,17 +19,17 @@ def moyenne(nom, resultats):
     '''Renvoie la moyenne de l'élève nom, selon le dictionnaire 
     resultats. Si nom n'est pas dans le dictionnaire, 
     la fonction renvoie None.'''
-    if nom in ...: 
+    if nom in resultats: 
         notes = resultats[nom]
-        if ...: # pas de notes 
+        if notes == 0: # pas de notes 
             return 0
-        total_points = ... 
-        total_coefficients = ... 
-        for ...  in notes.values(): 
+        total_points = 0 
+        total_coefficients = 0 
+        for i in notes.values(): 
             note, coefficient = valeurs
-            total_points = total_points + ... * coefficient 
-            ... = ... + coefficient 
-        return round( ... / total_coefficients, 1 ) 
+            total_points = total_points + i * coefficient 
+            ... = resultats[nom] + coefficient 
+        return round( total_points / total_coefficients, 1 ) 
     else:
         return None
 
