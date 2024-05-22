@@ -17,3 +17,8 @@ def accessibles(adj, x):
     return acc
 
 
+# [0, 1, 2, 3]
+print(accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 0))
+
+# [4, 5]
+print(accessibles([[1, 2], [0], [0, 3], [1], [5], [4]], 4))
