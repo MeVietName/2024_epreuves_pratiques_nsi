@@ -1,14 +1,19 @@
 def separe(tab):
     '''Separe les 0 et les 1 dans le tableau tab'''
     gauche = 0
-    droite = ... 
+    droite = len(tab) - 1 # j'avais fait -1 au lieu de faire la longueur de la liste - 1
     while gauche < droite:
         if tab[gauche] == 0 :
-            gauche = ... 
+            gauche = gauche + 1
         else :
-            tab[gauche] = ... 
-            tab[droite] = ... 
-            droite = ... 
+            tab[gauche] = 0 
+            tab[droite] = 1 
+            droite = droite - 1
     return tab
 
 
+# [0, 0, 0, 0, 1, 1, 1, 1]
+print(separe([1, 0, 1, 0, 1, 0, 1, 0]))
+
+# [0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+print(separe([1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0]))
