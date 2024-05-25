@@ -22,6 +22,3 @@ print(ajoute_dictionnaires({}, {2: 9, 3: 11}))
 
 # {1: 5, 2: 7}
 print(ajoute_dictionnaires({1: 5, 2: 7}, {}))
-
-git config --global user.email "thibautnemo@gmail.com"
-git config --global user.name "MeVietName"

@@ -9,12 +9,14 @@ def nombre_coups():
     nombre_cases_vues = 1
     cases_vues[0] = True
     case_en_cours = 0
-    n = ... 
-    while ... < ...: 
+    n = 0 
+    while nombre_cases_vues < nombre_cases: 
         x = randint(1, 6)
-        case_en_cours = (case_en_cours + ...) % ... 
-        if ...: 
+        case_en_cours = (case_en_cours + x) % nombre_cases
+        if cases_vues[case_en_cours] == False: 
             cases_vues[case_en_cours] = True
-            nombre_cases_vues = ... 
-        n = ... 
+            nombre_cases_vues = nombre_cases_vues + 1 
+        n = n + 1 
     return n
+
+print(nombre_coups)
