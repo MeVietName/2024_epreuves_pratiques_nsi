@@ -1,7 +1,7 @@
 class Carre:
     def __init__(self, liste, n): 
-        self.ordre = n        
-        self.tableau = [[liste[i + j * n] for i in range(n)] 
+        self.ordre = n
+        self.tableau = [[liste[i + j * n] for i in range(n)]
                         for j in range(n)] 
                                    
     def affiche(self):        
@@ -29,15 +29,22 @@ class Carre:
     def est_semimagique(self): 
         s = self.somme_ligne(0) 
         #test de la somme de chaque ligne 
-        for i in range(...): 
-            if ... != s: 
-                return ... 
+        for i in range(self.ordre): 
+            if s[i] != s: 
+                return False 
                                    
         #test de la somme de chaque colonne 
         for j in range(...): 
             if ... != s: 
-                return ... 
+                return False 
                                    
-        return ... 
+        return True 
 
+# [3, 4, 5]
+# [4, 4, 4]
+# [5, 4, 3]
+lst_c3 = [3, 4, 5, 4, 4, 4, 5, 4, 3]
+c3 = Carre(lst_c3, 3)
+c3.affiche()
 
+print(Carre.est_semimagique())
