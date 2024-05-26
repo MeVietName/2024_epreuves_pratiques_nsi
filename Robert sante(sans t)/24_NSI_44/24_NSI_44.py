@@ -23,10 +23,13 @@ def insere(arbre, cle):
     if arbre == None:
         return Noeud(cle, None, None) # creation d'une feuille
     else:
-        if ...: 
+        if cle < arbre.etiquette: 
             arbre.gauche = insere(arbre.gauche, cle)
         else:
-            arbre.droit = ... 
+            arbre.droit = insere(arbre.droit, cle) 
         return arbre
-
-
+    
+a_5 = Noeud(5,None, None)
+a_2 = insere(a_5,2)
+a_7 = insere(a_2,7)
+a_3 = insere(a_7,3)
