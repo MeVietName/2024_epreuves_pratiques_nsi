@@ -21,15 +21,22 @@ class Pile:
 
 def eval_expression(tab):
     p = Pile()
-    for ... in tab: 
-        if element != '+' ... element != '*': 
-            p.empiler(...) 
+    for element in tab: 
+        if element != '+' and element != '*': 
+            p.empiler(element) 
         else:
-            if element == ...: 
-                resultat = ... + ... 
+            if element == '+': 
+                resultat = p.depiler() + p.depiler()
             else:
-                resultat = ... 
-            p.empiler(...) 
-    return ... 
+                resultat = p.depiler() * p.depiler()
+            p.empiler(resultat) 
+    return p.depiler()
 
+# 25
+print(eval_expression([2, 3, '+', 5, '*']))
 
+# 9
+print(eval_expression([1, 2, '+', 3, '*']))
+
+# 5
+print(eval_expression([1, 2, 3, '+', '*']))
