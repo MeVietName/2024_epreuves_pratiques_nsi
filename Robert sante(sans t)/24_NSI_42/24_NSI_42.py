@@ -4,15 +4,25 @@ def dichotomie(tab, x):
     La fonction renvoie True si tab contient x et False sinon"""
 
     debut = 0
-    fin = ... 
+    fin = len(tab) - 1
     while debut <= fin:
-        m = ... 
+        m = (debut + fin) // 2  # bien mettre (debut + fin // 2) 
         if x == tab[m]:
-            return ... 
+            return True
         if x > tab[m]:
-            debut = ... 
+            debut = m + 1
         else:
-            fin = ... 
+            fin = m - 1
     return False
 
+# True
+print(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 28))
 
+# False
+print(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 27))
+
+# False
+print(dichotomie([15, 16, 18, 19, 23, 24, 28, 29, 31, 33], 1))
+
+# False
+print(dichotomie([], 28))
