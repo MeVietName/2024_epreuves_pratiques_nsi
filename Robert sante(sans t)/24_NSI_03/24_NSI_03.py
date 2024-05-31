@@ -37,4 +37,7 @@ def bon_parenthesage(ch):
 print(bon_parenthesage("((()())(()))"))
 
 # False
-# print(bon_parenthesage("())(()"))
+print(bon_parenthesage("())(()"))
+
+# False
+print(bon_parenthesage("(())(()"))
