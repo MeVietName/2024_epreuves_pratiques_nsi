@@ -8,15 +8,10 @@ def est_un_ordre(tab):
     vus = []
 
     for x in tab:
-        if x < 1 or x > n or x in vus:
+        if x < 1 or x > n or x in vus: 
             return False
-        vus .append(x)
+        vus.append(x) 
     return True
-
-# False
-print(est_un_ordre([1, 6, 2, 8, 3, 7]))
-# True 
-print(est_un_ordre([5, 4, 3, 6, 7, 2, 1, 8, 9]))
 
 def nombre_points_rupture(ordre):
     '''
@@ -24,25 +19,33 @@ def nombre_points_rupture(ordre):
     un ordre de gènes de chromosome
     '''
     # on vérifie que ordre est un ordre de gènes
-    assert est_un_ordre(ordre) == False, "Ce n'est pas un ordre de gènes"
+    # assert ordre == est_un_ordre, "Ce n'est pas un ordre de genes" 
     n = len(ordre)
     nb = 0
-    if ordre[0] != 1: # le premier n'est pas 1
+    if ordre[0] != 1: # le premier n'est pas 1 
         nb = nb + 1
     i = 0
     while i < n-1: 
         if ordre[i] - ordre[i+1] not in [-1, 1]: # l'écart n'est pas 1 
             nb = nb + 1
         i = i + 1
-    if ordre[i] != n: # le dernier n'est pas n
+    if ordre[i] != n: # le dernier n'est pas n 
         nb = nb + 1
     return nb
+
+# False
+print(est_un_ordre([1, 6, 2, 8, 3, 7]))
+# True 
+print(est_un_ordre([5, 4, 3, 6, 7, 2, 1, 8, 9]))
 
 # 4
 print(nombre_points_rupture([5, 4, 3, 6, 7, 2, 1, 8, 9]))
 
 # 0
-# print(nombre_points_rupture([1, 2, 3, 4, 5]))
+print(nombre_points_rupture([1, 2, 3, 4, 5]))
 
 # 7
-# print(nombre_points_rupture([1, 6, 2, 8, 3, 7, 4, 5]))
+print(nombre_points_rupture([1, 6, 2, 8, 3, 7, 4, 5]))
+
+# 2
+print(nombre_points_rupture([2, 1, 3, 4]))
