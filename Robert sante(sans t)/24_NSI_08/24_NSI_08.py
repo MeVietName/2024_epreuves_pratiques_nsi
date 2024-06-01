@@ -18,34 +18,24 @@ class Expr:
     def infixe(self):
         """renvoie la représentation infixe de l'expression en
         chaine de caractères"""
-        s = 
+        s = ""
         if self.gauche is not None:
-            s = '(' + s + ... .infixe() 
-        s = s + ... 
+            s = '(' + s + self.gauche.infixe() 
+        s = s + str(self.valeur)
         if self.droite is not None: 
-            s = s + ... + ')' 
+            s = s + self.droite.infixe() + ')' 
         return s
 
-# Correction : 
-# def infixe(self):
-#         """renvoie la représentation infixe de l'expression en
-#         chaine de caractères"""
-#         s = "" 
-#         if self.gauche is not None:
-#             s = '(' + s + self.gauche.infixe() 
-#         s = s + str(self.valeur) 
-#         if self.droite is not None: 
-#             s = s + self.droite.infixe() + ')' 
-#         return s
+
 
 # '(1+2)'
-a = Expr(Expr(None, 1, None), '+', Expr(None, 2, None)
-
+a = Expr(Expr(None, 1, None), '+', Expr(None, 2, None))
+print(a.infixe())
 
 # '((1+2)*(3+4))'
 b = Expr(Expr(Expr(None, 1, None), '+', Expr(None, 2, None)),'*', Expr(Expr(None, 3, None), '+', Expr(None, 4, None)))
-b.infixe()
+print(b.infixe())
 
 # '((3*(8+7))-(2+1))'
 e = Expr(Expr(Expr(None, 3, None), '*', Expr(Expr(None, 8, None),'+', Expr(None, 7, None))),'-', Expr(Expr(None, 2, None), '+', Expr(None, 1, None)))
-e.infixe()
+print(e.infixe())
