@@ -5,8 +5,8 @@ def parcours(adj, x, acc):
     rencontrés dans acc'''
     if x not in acc:
         acc.append(x)
-        for y in ...: 
-            parcours(adj, x, ) 
+        for y in adj[x]: 
+            parcours(adj, y, acc)
 
 def accessibles(adj, x):
     '''Renvoie la liste des sommets accessibles dans le
