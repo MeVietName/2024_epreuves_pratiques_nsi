@@ -4,14 +4,14 @@ def trouver_intrus(tab, g, d):
     tab vérifie les conditions de l'exercice,
     g et d sont des multiples de 3."""
     if g == d:
-        return ...
+        return tab[d]
     else:
-        nombre_de_triplets = (d - g) // 2
+        nombre_de_triplets = (d - g) // 3
         indice = g + 3 * (nombre_de_triplets // 2)
-        if nombre_de_triplets == 0: 
-            return indice
+        if tab[indice] == tab[indice+1]: 
+            return trouver_intrus(tab, g+3, d)
         else:
-            return ... 
+            return trouver_intrus(tab, g, indice)
         
 # 7
 print(trouver_intrus([3, 3, 3, 9, 9, 9, 1, 1, 1, 7, 2, 2, 2, 4, 4, 4, 8, 8, 8], 0, 18))
