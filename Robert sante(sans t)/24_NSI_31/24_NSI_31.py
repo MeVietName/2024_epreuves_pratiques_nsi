@@ -7,7 +7,7 @@ def dichotomie(tab: list, x: int):
     debut = 0
     fin = len(tab) - 1
     while debut <= fin:
-        m = ?
+        m = debut + ((fin - debut) // 2) #bien se rappeller 
         if x == tab[m]:
             return True 
         if x > tab[m]:
