@@ -1,5 +1,9 @@
 def effectif_notes(tab: list)-> list:
-    new = [] * len(tab)
+    new = [0] * 11
+    for i in tab:
+        new[i] += 1
+        
+    return new
     
     
     

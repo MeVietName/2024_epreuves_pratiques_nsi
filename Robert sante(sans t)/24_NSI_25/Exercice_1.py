@@ -1,10 +1,7 @@
 def recherche_min(tab: list)-> int:
-    length = len(tab)
-    minimum = 0
-    for i in range(1, length):
-        if tab[i] < tab[minimum]:
-            minimum = i
-    return minimum
+    # minimum = 0
+    # for i in range(len(tab))
+    return tab.index(min(tab))
 
 # 0
 print(recherche_min([5]))

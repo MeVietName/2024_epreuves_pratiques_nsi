@@ -3,10 +3,10 @@ def parcours(adj, x, acc):
     du graphe donné par les listes d'adjacence adj 
     depuis le sommet x en accumulant les sommets
     rencontrés dans acc'''
-    if x not in acc: 
+    if x not in acc:
         acc.append(x)
-        for y in adj: 
-            parcours(adj, x, accessibles(adj, y)) 
+        for y in ...: 
+            parcours(adj, x, ) 
 
 def accessibles(adj, x):
     '''Renvoie la liste des sommets accessibles dans le
