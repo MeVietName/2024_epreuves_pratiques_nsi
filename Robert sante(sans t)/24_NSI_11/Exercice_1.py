@@ -11,7 +11,7 @@ def nombre_de_mots(phrase: str) -> int:
             count += 1
     return count
         
-nom
+# nom
 
 # 4
 print(nombre_de_mots('Cet exercice est simple.'))

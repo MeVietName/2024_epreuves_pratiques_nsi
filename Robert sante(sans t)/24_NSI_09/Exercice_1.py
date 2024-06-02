@@ -1,4 +1,5 @@
-def effectif_notes(tab):
+def effectif_notes(tab: list)-> list:
+    new = [] * len(tab)
     
     
     

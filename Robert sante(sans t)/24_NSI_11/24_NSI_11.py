@@ -13,7 +13,7 @@ class Noeud:
             if self.gauche != None:
                 self.gauche.inserer(cle)
             else:
-                self.gauche = Noeud(cle) 
+                self.gauche = Noeud(cle)
         else:
             if self.droit != None:
                 self.droit.inserer(cle)
@@ -22,7 +22,7 @@ class Noeud:
 
 # bien se rappeler que le if et le else sont pareil juste le .gauche/droit change donc peut s'aider avec ca
 
-arbre = Noeud(7)
+arbre = Noeud(7)    
 for cle in (3, 9, 1, 6):
     arbre.inserer(cle)
     
