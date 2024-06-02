@@ -1,24 +1,13 @@
-# def min_et_max(tab):
-#     dictionaire = {"min" : tab[0], "max" : tab[0]}
-#     for i in range(len(tab)-1):
-#         if tab[i] < tab[i+1]:
-#             mini = tab[i]
-#             dictionaire.update({"min" : mini})
-#         if tab[i] > tab[i+1]:
-#             maxi = tab[i]
-#             dictionaire.update({"max" : maxi})
-#     return dictionaire
-# voila ce que j'avais essaye de faire 
-
-# en bas la seconde methode qui MARCHE
-    
-def min_et_max(tab):
-    dictionaire = {"min" : tab[0], "max" : tab[0]}
+def min_et_max(tab: list)-> dict:
+    dictionaire = {}
+    minimum, maximum = tab[0], tab[0]
     for i in range(1, len(tab)):
-        if tab[i] < dictionaire['min']:
-            dictionaire['min'] = tab[i]
-        if tab[i] > dictionaire['max']:
-            dictionaire['max'] = tab[i]
+        if tab[i] > maximum:
+            maximum = tab[i]
+        if tab[i] < minimum:
+            minimum = tab[i]
+    dictionaire["min"] = minimum
+    dictionaire["max"] = maximum
     return dictionaire
 
 
