@@ -1,18 +1,17 @@
 def echange(tab, i, j):
     '''Echange les éléments d'indice i et j dans le tableau tab.'''
-    temp = tab[i] 
-    tab[i] = tab[j] 
+    temp = tab[i]
+    tab[i] = tab[j]
     tab[j] = temp
-    
 
 def tri_bulles(tab):
     '''Trie le tableau tab dans l'ordre croissant
     par la méthode du tri à bulles.'''
     n = len(tab)
-    for i in range(n-1): 
-        for j in range(n-1): # ? idk on the correction they wrote range(n-i-1) 
-            if tab[j] > tab[j+1]: 
-                echange(tab, j, j+1)
+    for i in range(len(tab)): 
+        for j in range(i, len(tab)): 
+            if tab[i] > tab[j]: 
+                echange(tab, j, i) 
     return tab
 
 # []
