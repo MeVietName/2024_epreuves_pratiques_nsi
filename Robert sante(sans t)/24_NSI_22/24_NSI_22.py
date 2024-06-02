@@ -1,3 +1,6 @@
+from unittest import result
+
+
 resultats = {
     'Dupont': {
         'DS1': [15.5, 4],
@@ -21,16 +24,21 @@ def moyenne(nom, resultats):
     la fonction renvoie None.'''
     if nom in resultats: 
         notes = resultats[nom]
-        if notes == 0: # pas de notes 
+        if notes == [] : # pas de notes 
             return 0
-        total_points = 0 
-        total_coefficients = 0 
-        for i in notes.values(): 
+        total_points = 0
+        total_coefficients = 0
+        for valeurs in notes.values(): 
             note, coefficient = valeurs
-            total_points = total_points + i * coefficient 
-            ... = resultats[nom] + coefficient 
+            total_points = total_points + note * coefficient 
+            total_coefficients = total_coefficients + coefficient 
         return round( total_points / total_coefficients, 1 ) 
     else:
         return None
 
 
+# 14.5
+print(moyenne("Dupont", resultats))
+
+# 8.5
+print(moyenne("Durand", resultats))
