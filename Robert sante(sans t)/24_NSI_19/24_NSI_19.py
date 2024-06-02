@@ -11,13 +11,15 @@ def codes_parfait(mot):
     - code_concatene est le code des lettres du mot concaténées ;
     - mot_est_parfait est un booléen indiquant si le mot est parfait."""
     code_concatene = ""
-    code_additionne = 0 
+    code_additionne = 0
     for c in mot:
-        code_concatene = code_concatene + str(dico[c]) 
-        code_additionne = code_additionne + dico[c] 
+        code_concatene = code_concatene + str(dico[c])
+        code_additionne = code_additionne + dico[c]
     code_concatene = int(code_concatene)
-    mot_est_parfait = (code_additionne%code_concatene) == 0
+    mot_est_parfait = code_concatene % code_additionne == 0
     return code_additionne, code_concatene, mot_est_parfait
+
+
 
 # (50, 1612112, False)
 print(codes_parfait("PAUL"))
