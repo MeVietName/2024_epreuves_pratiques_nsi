@@ -4,33 +4,34 @@ class Noeud:
         self.gauche = gauche
         self.droit = droit
 
-a = Noeud(1, Noeud(4, None, None),Noeud(0, None,Noeud(7, None, None)))
+a = Noeud(1, Noeud(4, None, None), Noeud(0, None, Noeud(7, None, None)))
 
-def taille(a)-> int: #nombre de noeud
+def taille(a):
     if a == None:
         return 0
     return 1 + taille(a.gauche) + taille(a.droit)
 
-def hauteur(a): 
+def hauteur(a):
     if a == None:
         return -1
     return 1 + max(hauteur(a.gauche), hauteur(a.droit))
 
     
-# 2
-print(hauteur(a))
 
 # 4
 print(taille(a))
 
-# -1
-print(hauteur(None))
-
 # 0
 print(taille(None))
+
+# 1
+print(taille(Noeud(1, None, None)))
 
 # 0
 print(hauteur(Noeud(1, None, None)))
 
-# 1
-print(taille(Noeud(1, None, None)))
+# -1
+print(hauteur(None))
+
+# 2
+print(hauteur(a))
