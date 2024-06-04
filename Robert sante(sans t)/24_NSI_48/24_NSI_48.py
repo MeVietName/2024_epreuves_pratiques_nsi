@@ -4,15 +4,21 @@ def nombre_suivant(s):
     resultat = ''
     chiffre = s[0]
     compte = 1
-    for i in range(len(s)):
+    for i in range(1, len(s)):
         if s[i] == chiffre:
-            compte = ... 
+            compte = compte + 1
         else:
-            resultat += ... + ... 
-            chiffre = ... 
-            ...
-    lecture_chiffre = ... + ... 
+            resultat += str(compte) + chiffre
+            chiffre = s[i]
+            compte = 1
+    lecture_chiffre = str(compte) + chiffre
     resultat += lecture_chiffre
     return resultat
 
+# '11'
 
+# '111221'
+print(nombre_suivant('1211'))
+
+# '1321'
+print(nombre_suivant('311'))

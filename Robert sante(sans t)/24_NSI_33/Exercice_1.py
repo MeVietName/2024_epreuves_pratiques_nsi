@@ -1,6 +1,12 @@
 def renverse(mot: str)-> str:
-    txt = mot[::-1]
-    return txt
+    new = ""
+    i = -1 
+    while len(mot) != len(new):
+        new += mot[i]
+        i += -1
+    return new
+    
+        
 
 # ""
 print(renverse(""))
