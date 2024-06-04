@@ -17,7 +17,7 @@ def liste_puissances_borne(a: int, borne):
     # return liste_calcul
     if a>=borne:
         return []
-    liste = [1]
+    liste = [a]
     i=1
     while a*liste[i-1]<borne:
         liste.append(a*liste[i-1])

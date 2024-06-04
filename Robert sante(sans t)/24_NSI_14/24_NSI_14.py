@@ -23,25 +23,25 @@ class Paquet_de_cartes:
         """ Initialise l'attribut contenu avec une liste des 52
         objets Carte possibles rangés par valeurs croissantes en
         commençant par pique, puis cœur, carreau et trèfle. """
-        ...
-        for i in range(52):
-            
-                ...
+        self.contenu = []
+        for i in range(1,5):
+            for k in range(1,14):
+                self.contenu.append(Carte(i, k))
 
     def recuperer_carte(self, pos):
         """ Renvoie la carte qui se trouve à la position pos 
         (entier compris entre 0 et 51). """
-        `...`
-        ...
+        assert pos > -1 and pos < 52, "pas bon"
+        return self.contenu[pos]
         
 jeu = Paquet_de_cartes()
 # "8 de coeur"
 carte1 = jeu.recuperer_carte(20)
 carte1.recuperer_valeur() + " de " + carte1.recuperer_couleur()
 carte2 = jeu.recuperer_carte(0)
-
+    
 # "As de pique"
 carte2.recuperer_valeur() + " de " + carte2.recuperer_couleur()
 
 # AssertionError : paramètre pos invalide
-carte3 = jeu.recuperer_carte(52)
+# carte3 = jeu.recuperer_carte(52)
